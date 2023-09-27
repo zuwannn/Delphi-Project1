@@ -1,0 +1,79 @@
+unit TFrmAnalogOdometersData;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, VclTee.TeeGDIPlus, Vcl.StdCtrls,
+  VCLTee.TeEngine, VCLTee.Series, Vcl.ExtCtrls, VCLTee.TeeProcs, VCLTee.Chart,UNotifyObjList,UAnalogOdometersUnit;
+
+type
+  TAnalogOdometersData = class(TForm)
+    chkOdom1: TCheckBox;
+    lblValueText: TLabel;
+    chkOdom2: TCheckBox;
+    lblValueText1: TLabel;
+    chkOdom3: TCheckBox;
+    lblValueText2: TLabel;
+    cht: TChart;
+    Series1: TFastLineSeries;
+    btnClear: TButton;
+  private
+     fAnalogOdometersUnit: TAnalogOdometersUnit;
+     fOnValuesEventHndlr: TEventHndlr;
+     procedure OnValuesEventHndlrProc(Initiator: TObject);
+     procedure SetAnalogOdometersUnit(const Value: TAnalogOdometersData);
+     procedure ShowValues;
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+
+  public
+    property AnalogOdometersUnit: TAnalogOdometersUnit read fAnalogOdometersUnit write SetAnalogOdometersUnit;
+
+  end;
+
+var
+  AnalogOdometersData: TAnalogOdometersData;
+
+implementation
+
+{$R *.dfm}
+constructor TFrmAnalogOdometersData.Create;
+begin
+
+end;
+
+destructor TFrmAnalogOdometersData.Destroy;
+begin
+  fOnValuesEventHndlr.Free;
+  inherited;
+end;
+
+procedure TFrmAnalogOdometersData.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  Action := caFree;
+end;
+
+procedure TFrmAnalogOdometersData.OnValuesEventHndlrProc(Initiator: TObject);
+begin
+  ShowValues;
+end;
+
+procedure TFrmAnalogOdometersData.SetAnalogOdometersData(
+  const Value: TAnalogOdometersData);
+begin
+  fAnalogOdometersData := Value;
+  fOnValuesEventHndlr := TEventHndlr.Create(fAnalogOdometersData.OnValuesEvent, OnValuesEventHndlrProc);
+end;
+
+procedure TAnalogOdometersData.ShowValues;
+begin
+   lblValueText.Caption  := IntToStr(AnalogOdometersUnit.Values[0]);
+   lblValueText1.Caption := IntToStr(AnalogOdometersUnit.Values[1]);
+   lblValueText2.Caption := IntToStr(AnalogOdometersUnit.Values[2]);
+end;
+end.

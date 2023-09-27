@@ -1,0 +1,51 @@
+unit TFrmAnalogOdometersData;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, VclTee.TeeGDIPlus, Vcl.StdCtrls,
+  VCLTee.TeEngine, VCLTee.Series, Vcl.ExtCtrls, VCLTee.TeeProcs, VCLTee.Chart;
+
+type
+  TAnalogOdometersData = class(TForm)
+    chkOdom1: TCheckBox;
+    lblValueText: TLabel;
+    chkOdom2: TCheckBox;
+    lblValueText1: TLabel;
+    chkOdom3: TCheckBox;
+    lblValueText2: TLabel;
+    cht: TChart;
+    Series1: TFastLineSeries;
+    btnClear: TButton;
+  private
+     fAnalogOdometersData: TAnalogOdometersData;
+     fOnValuesEventHndlr: TEventHndlr;
+     procedure OnValuesEventHndlrProc(Initiator: TObject);
+     procedure SetAnalogOdometersData(const Value: TAnalogOdometersData);
+     procedure ShowValues;
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+
+  public
+    property AnalogOdometersData: TAnalogOdometersData read fAnalogOdometersData write SetAnalogOdometersData;
+
+  end;
+
+var
+  AnalogOdometersData: TAnalogOdometersData;
+
+implementation
+
+{$R *.dfm}
+
+procedure TAnalogOdometersData.ShowValues;
+begin
+   lblValueText.Caption  := IntToStr(AnalogOdometersData.Values[0]);
+   lblValueText1.Caption := IntToStr(AnalogOdometersData.Values[1]);
+   lblValueText2.Caption := IntToStr(AnalogOdometersData.Values[2]);
+end;
+end.
