@@ -3,7 +3,7 @@ unit UAnalogOdometersUnit;
 interface
 
 uses
-   UNotifyObjList;
+   UNotifyObjList,UAnalogOdometersDataMock;
 
  type
   TAnalogOdometersUnit = class

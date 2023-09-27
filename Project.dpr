@@ -4,7 +4,8 @@ uses
   Vcl.Forms,
   TFrmAnalogOdometersData in 'TFrmAnalogOdometersData.pas' {AnalogOdometersData},
   UNotifyObjList in 'UNotifyObjList.pas',
-  UAnalogOdometersUnit in 'UAnalogOdometersUnit.pas';
+  UAnalogOdometersUnit in 'UAnalogOdometersUnit.pas',
+  UAnalogOdometersDataMock in 'UAnalogOdometersDataMock.pas';
 
 {$R *.res}
 
