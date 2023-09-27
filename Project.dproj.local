@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/05/25 08:09:11.000.118,=C:\Users\suwannee.thongtha\OneDrive - Dexon Technology Public Company Limited\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/06/22 16:02:15.000.000,=C:\Users\suwannee.thongtha\OneDrive - Dexon Technology Public Company Limited\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/09/27 09:25:20.000.051,=C:\Users\suwannee.thongtha\OneDrive - Dexon Technology Public Company Limited\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/09/27 09:25:56.000.038,C:\Users\suwannee.thongtha\OneDrive - Dexon Technology Public Company Limited\Documents\Embarcadero\Studio\TestP_2\TFrmAnalogOdometersData.pas=C:\Users\suwannee.thongtha\OneDrive - Dexon Technology Public Company Limited\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/09/27 09:25:56.000.038,C:\Users\suwannee.thongtha\OneDrive - Dexon Technology Public Company Limited\Documents\Embarcadero\Studio\TestP_2\TFrmAnalogOdometersData.dfm=C:\Users\suwannee.thongtha\OneDrive - Dexon Technology Public Company Limited\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2023/09/27 09:26:07.000.917,C:\Users\suwannee.thongtha\OneDrive - Dexon Technology Public Company Limited\Documents\Embarcadero\Studio\TestP_2\Project.dproj=C:\Users\suwannee.thongtha\OneDrive - Dexon Technology Public Company Limited\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
